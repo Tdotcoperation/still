@@ -4,6 +4,10 @@
 
 `wrangler.jsonc`의 `ASSETS` 바인딩이 `dist/`를 제공합니다. `npm run build`는 타입 검사, Vite 빌드, 해시 기반 앱 셸 서비스 워커 생성을 수행합니다. 원본 PNG는 정적 배포에 포함되지 않고 최적화 WebP만 포함됩니다.
 
+`wrangler.jsonc`의 custom build가 `npm ci && npm run build`를 실행하므로, 빌드 명령이 비어 있어도 `npx wrangler deploy`가 먼저 앱을 빌드합니다. npm 배포 스크립트도 이 공통 경로를 사용해 빌드를 중복하지 않습니다.
+
+프로덕션 브랜치는 앱이 병합된 `main`, 루트 디렉터리는 저장소 최상위 `/`, Worker 이름은 `still`을 사용합니다.
+
 Cloudflare 계정 로그인 후 `npm run deploy`를 실행합니다. GitHub 저장소를 Cloudflare Workers Builds에 연결할 때 빌드 명령은 `npm ci && npm run build`, 배포 명령은 `npx wrangler deploy --env=""`입니다. 프로덕션 배포 전 `npm run deploy:check`로 구성을 검증하세요.
 
 로컬 환경에는 Cloudflare 인증이 없어 공개 URL 배포를 검증하지 못했습니다. 임의의 다른 계정이나 임시 계정으로 배포하지 않습니다.

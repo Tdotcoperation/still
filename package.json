@@ -11,8 +11,8 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "assets:optimize": "node scripts/optimize-images.mjs",
-    "deploy": "npm run build && wrangler deploy --env=\"\"",
-    "deploy:check": "npm run build && wrangler deploy --dry-run --env=\"\"",
+    "deploy": "wrangler deploy --env=\"\"",
+    "deploy:check": "wrangler deploy --dry-run --env=\"\"",
     "media:upload": "node scripts/upload-r2.mjs"
   },
   "dependencies": {
