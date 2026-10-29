@@ -1,0 +1,39 @@
+{
+  "name": "still",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && node scripts/build-sw.mjs",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "assets:optimize": "node scripts/optimize-images.mjs",
+    "deploy": "wrangler deploy --env=\"\"",
+    "deploy:check": "wrangler deploy --dry-run --env=\"\"",
+    "media:upload": "node scripts/upload-r2.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.63.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "wanted-sans": "^1.0.3"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxlint": "^1.89.0",
+    "prettier": "^3.9.10",
+    "sharp": "^0.35.5",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5",
+    "wrangler": "^4.154.0"
+  }
+}

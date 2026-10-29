@@ -1,0 +1,5 @@
+STILL original synthesized soundscapes, 2026. No third-party samples.
+Dedicated to the public domain under CC0 1.0 Universal.
+https://creativecommons.org/publicdomain/zero/1.0/
+Source: scripts/generate-audio.py
+These are synthesized interpretations, not field recordings.

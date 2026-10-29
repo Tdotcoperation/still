@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "name": "끝없는 바다",
+    "description": "Endless pastel blue ocean, lavender clouds reflected in gentle water",
+    "category": 0
+  },
+  {
+    "id": 2,
+    "name": "분홍빛 노을",
+    "description": "Rose pink sunset ocean, coral sky and luminous calm tidal pools",
+    "category": 0
+  },
+  {
+    "id": 3,
+    "name": "달빛의 바다",
+    "description": "Silver moon over turquoise ocean, soft pearly cloud banks",
+    "category": 0
+  },
+  {
+    "id": 4,
+    "name": "새벽의 수평선",
+    "description": "Peach dawn horizon over misty blue sea, thin golden sunlight",
+    "category": 0
+  },
+  {
+    "id": 5,
+    "name": "안개 낀 해안",
+    "description": "Dreamy foggy coast with pale smooth rocks and tranquil milky water",
+    "category": 0
+  },
+  {
+    "id": 6,
+    "name": "구름이 내려앉은 바다",
+    "description": "Fluffy gigantic clouds resting directly on calm blue ocean",
+    "category": 0
+  },
+  {
+    "id": 7,
+    "name": "하늘을 비추는 바다",
+    "description": "Perfect mirror ocean reflecting surreal lavender sky",
+    "category": 0
+  },
+  {
+    "id": 8,
+    "name": "푸른 기억의 해변",
+    "description": "Nostalgic empty powder blue beach with shimmering gentle surf",
+    "category": 0
+  },
+  {
+    "id": 9,
+    "name": "기억 속 들판",
+    "description": "Nostalgic rolling green field with solitary tree in pastel haze",
+    "category": 1
+  },
+  {
+    "id": 10,
+    "name": "안개 숲",
+    "description": "Inviting misty forest with pale green moss and soft light rays",
+    "category": 1
+  },
+  {
+    "id": 11,
+    "name": "보랏빛 정원",
+    "description": "Dream garden of lavender flowers and lilac trees",
+    "category": 1
+  },
+  {
+    "id": 12,
+    "name": "구름 위 들판",
+    "description": "Floating grassy meadow above a sea of white clouds",
+    "category": 1
+  },
+  {
+    "id": 13,
+    "name": "반딧불 숲",
+    "description": "Warm glowing fireflies in an inviting twilight forest",
+    "category": 1
+  },
+  {
+    "id": 14,
+    "name": "햇살이 머무는 언덕",
+    "description": "Golden sun lingering on a soft green hill",
+    "category": 1
+  },
+  {
+    "id": 15,
+    "name": "꿈속의 꽃밭",
+    "description": "Dreamy field of pastel wildflowers under pearl sky",
+    "category": 1
+  },
+  {
+    "id": 16,
+    "name": "바람의 초원",
+    "description": "Windswept silky grass prairie with airy blue sky",
+    "category": 1
+  },
+  {
+    "id": 17,
+    "name": "고요한 수영장",
+    "description": "Serene empty pastel tiled indoor pool with sky reflections",
+    "category": 2
+  },
+  {
+    "id": 18,
+    "name": "끝없는 복도",
+    "description": "Peaceful endless pale blue corridor with soft daylight and arches",
+    "category": 2
+  },
+  {
+    "id": 19,
+    "name": "구름 위의 방",
+    "description": "Minimal inviting white room floating above clouds open to sky",
+    "category": 2
+  },
+  {
+    "id": 20,
+    "name": "텅 빈 기차역",
+    "description": "Peaceful empty pastel railway station in warm evening sunlight",
+    "category": 2
+  },
+  {
+    "id": 21,
+    "name": "햇빛 드는 계단",
+    "description": "White architectural stairs bathed in warm sunlight blue sky",
+    "category": 2
+  },
+  {
+    "id": 22,
+    "name": "푸른빛의 대기실",
+    "description": "Minimal peaceful blue waiting lounge with rounded seats and diffuse light",
+    "category": 2
+  },
+  {
+    "id": 23,
+    "name": "끝없는 하얀 공간",
+    "description": "Infinite soft white architectural space with gentle curves and luminous horizon",
+    "category": 2
+  },
+  {
+    "id": 24,
+    "name": "창문 너머의 하늘",
+    "description": "Huge arched window framing dreamy pastel clouds in quiet room",
+    "category": 2
+  },
+  {
+    "id": 25,
+    "name": "별빛 호수",
+    "description": "Still lake reflecting warm starlight surrounded by gentle dark hills",
+    "category": 3
+  },
+  {
+    "id": 26,
+    "name": "푸른 새벽길",
+    "description": "Quiet blue dawn pathway through softly misty meadow",
+    "category": 3
+  },
+  {
+    "id": 27,
+    "name": "달의 정원",
+    "description": "Luminous moon garden with white flowers and silver leaves",
+    "category": 3
+  },
+  {
+    "id": 28,
+    "name": "고요한 밤바다",
+    "description": "Peaceful indigo night ocean with silver ripples and soft stars",
+    "category": 3
+  },
+  {
+    "id": 29,
+    "name": "은하수 언덕",
+    "description": "Gentle grassy hill under luminous pastel Milky Way",
+    "category": 3
+  },
+  {
+    "id": 30,
+    "name": "달빛이 드는 방",
+    "description": "Cozy minimalist room lit by soft moonlight through tall window",
+    "category": 3
+  },
+  {
+    "id": 31,
+    "name": "별들이 내리는 들판",
+    "description": "Dream meadow with gently descending luminous stars",
+    "category": 3
+  },
+  {
+    "id": 32,
+    "name": "영원한 밤의 수평선",
+    "description": "Infinite tranquil deep blue night horizon with faint violet aurora",
+    "category": 3
+  }
+]
