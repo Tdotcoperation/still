@@ -73,3 +73,5 @@ npm run test:e2e
 ```
 
 `PROJECT_SPEC.md`: 요구사항, `ARCHITECTURE.md`: 설계, `PROGRESS.md`: 재개 지점, `TEST_REPORT.md`: 실제 검증 및 한계. 코드 라이선스는 기존 MIT `LICENSE`를 유지합니다. API 키나 토큰은 커밋하지 않습니다.
+
+추가 브라우저 기본 검사: `npx playwright install webkit firefox` 후 별도 터미널에서 `npm run preview -- --host 127.0.0.1 --port 4175`를 실행하고 `node scripts/browser-smoke.mjs`를 실행합니다. 실제 기기 검증과는 구분합니다.

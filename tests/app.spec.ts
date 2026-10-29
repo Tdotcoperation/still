@@ -135,6 +135,7 @@ test("offline shell and explicitly saved artwork survive reload", async ({
 }) => {
   await page.goto("/");
   await page.evaluate(() => navigator.serviceWorker.ready);
+  await page.mouse.click(10, 200);
   await expect(page.locator(".landscape-image").last()).toBeVisible();
   await page.getByRole("button", { name: "배경", exact: true }).click();
   await page.getByRole("button", { name: "현재 풍경 오프라인 저장" }).click();
@@ -193,6 +194,7 @@ test("saved single track can play offline with other tracks disabled", async ({
 }) => {
   await page.goto("/");
   await page.evaluate(() => navigator.serviceWorker.ready);
+  await page.mouse.click(10, 200);
   await open(page, "힐링 사운드");
   await page
     .getByRole("button", { name: "파도 오프라인 저장", exact: true })

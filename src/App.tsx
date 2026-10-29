@@ -686,7 +686,7 @@ export default function App() {
         </header>
         <div className="hero-copy">
           <div className="tiny-line" />
-          <p className="eyebrow">A MOMENT, JUST FOR YOU</p>
+          <p className="eyebrow">오롯이, 나를 위한 시간</p>
           <h1 key={message}>{messages[message]}</h1>
           <p>어디에도 서두르지 않아도 되는 시간</p>
         </div>

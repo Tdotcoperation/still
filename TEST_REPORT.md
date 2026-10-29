@@ -1,25 +1,65 @@
-# Test report
+# STILL v1.0 테스트 결과
 
-## Verified during implementation
+검증일: 2026-10-29 (Asia/Seoul)
 
-- TypeScript and Vite production build passed.
-- Vitest: 7 state validation, timer and breathing tests passed.
-- Oxlint: no warnings after corrections.
-- Chromium desktop and Pixel viewport tests individually passed for core UI, menu-only breath, real MP3 decoding/playback start, presets, ephemeral worry, timer restoration, failed background retention, saved-image offline reload, saved single-track offline playback, import/reset, keyboard trap and axe accessibility on all six panels.
-- Final combined regression is being rerun after correcting a test locator that matched both a background loading status and the timer completion status. The application timer completed correctly.
-- 64 original PNGs and 64 WebP/thumbnail pairs exist; contact sheets visually inspected.
-- Workers and R2 configuration both passed Wrangler dry run. This does not prove live deployment.
+## 실행 결과
 
-## Corrections made
+| 검사 | 결과 |
+|---|---|
+| TypeScript + Vite 프로덕션 빌드 | 통과 |
+| Oxlint | 경고·오류 없음 |
+| Vitest | 7개 통과 |
+| Chromium PC + Pixel 7 화면 에뮬레이션 | 20개 통과, 최종 실행 40.6초 |
+| WebKit 27.2 기본 기능 검사 | 배경 디코딩·음원 재생 시작·호흡 시작 통과, 실행 오류 없음 |
+| Firefox 157.0 기본 기능 검사 | 배경 디코딩·음원 재생 시작·호흡 시작 통과, 실행 오류 없음 |
+| axe WCAG 2 A/AA 및 2.1 AA 자동 검사 | 메인 화면과 6개 기능 패널 통과 |
+| Workers 기본 배포 dry run | 통과 |
+| Workers + R2 바인딩 dry run | 통과 |
 
-- Fixed initial JSX closing tag and separated Vitest discovery from Playwright tests.
-- Fixed shell-cache matching for offline crossorigin script/style requests.
-- Made controls behind modal panels inert and preserved keyboard focus.
-- Allowed offline playback of saved tracks without requiring muted/disabled missing tracks.
-- Restore the last successful background selection after image load failure.
-- Stop idle timer polling and preserve actual deadline arithmetic.
-- Keep app shell when removing user settings/media, so data reset does not break offline app launch.
+프로덕션 빌드 이후 중앙 문구의 영어 보조 문장을 한국어로 바꾸는 문구 수정이 있었습니다. 기능 테스트 결과는 동일한 기능 코드 기준이며 최종 빌드에서 문구 수정도 확인했습니다.
 
-## Not verified
+## 브라우저에서 확인한 항목
 
-Cloudflare live URL and real R2 operations (no authenticated account); installation on physical Android/iOS devices; device speakers/headphones, OS background termination behavior, hardware vibration. Browser playback start and decoded non-silent samples do not constitute a human listening review.
+1. 메인 화면에 호흡 바로가기가 없고 메뉴에서만 접근함.
+2. 가로/세로 전용 배경 선택, 가로 넘침 없는 반응형 화면.
+3. 호흡 시작·일시정지·재개·종료, 메뉴와 배경 상태 유지.
+4. 실제 MP3 디코딩과 재생 시작, 프리셋 저장·새로고침 복원·삭제.
+5. 고민 취소 시 초기화, 흘려보내기 후 위로 표시, LocalStorage에 입력 내용 없음.
+6. 타이머 새로고침 복원·일시정지·이미 경과한 종료 시각 처리.
+7. 실패한 배경 로딩이 이전 풍경을 교체하지 않음.
+8. 고대비 설정 저장 및 복원.
+9. 저장한 풍경과 앱 셸의 오프라인 새로고침.
+10. 저장한 한 음원만 활성화했을 때 오프라인 재생.
+11. 패널 키보드 포커스 유지, Escape 닫기, 모달 뒤 컨트롤 접근 차단.
+12. 잘못된 설정 파일 거부, 로컬 데이터 초기화.
+13. PC 32개 및 모바일 32개 배경의 브라우저 디코딩.
+14. 여섯 MP3의 약 48초 길이, 스테레오, 실제 비무음 샘플 디코딩.
+
+## 자산 검증
+
+- 별도 AI 생성 PNG 64개: 가로 32개 + 세로 32개. 크롭으로 모바일 이미지를 대체하지 않음.
+- 실해상도: 가로 1672×940 또는 1672×941, 세로 940×1672 또는 941×1672.
+- 표시용 WebP 64개 + 썸네일 64개.
+- 원본 합계 약 145.11 MiB, 표시용 WebP 합계 약 11.33 MiB.
+- 가로/세로 전체 콘택트 시트를 육안 검토. 원본 SHA-256·해상도·프롬프트는 ASSET_MANIFEST.json.
+- 여섯 오리지널 합성 음원은 CC0-1.0으로 제공. 현장 녹음은 아님.
+- GitHub 바이너리 전송은 각 파일의 Git blob SHA와 반환 SHA가 일치하는 경우만 반영.
+
+## 발견하고 수정한 문제
+
+- JSX 닫는 태그 오류와 Vitest/Playwright 테스트 탐색 충돌.
+- 오프라인 재접속 시 crossorigin JS/CSS 요청과 캐시의 Vary 차이로 앱 셸을 찾지 못하던 문제.
+- 모달 뒤 컨트롤이 키보드 탐색에 남던 문제.
+- 오프라인 믹서가 음소거된 미저장 트랙까지 요구하던 문제.
+- 배경 요청 실패 시 저장된 선택이 실제 표시 풍경과 어긋나던 문제.
+- 유휴 상태 타이머의 불필요한 주기적 렌더링.
+- 데이터 초기화가 오프라인 앱 셸까지 제거하던 문제.
+- 테스트가 로딩 안내와 완료 안내를 동시에 선택하던 문제 및 자동 숨김 후 화면을 깨우지 않고 버튼을 누르던 문제. 테스트를 사용자 동작에 맞게 수정 후 최종 20개 통과.
+
+## 명확한 검증 한계
+
+- 실제 Android/iOS 기기의 PWA 설치, 진동, 시스템의 앱 중단/백그라운드 오디오 동작은 미검증.
+- 자동 접근성 검사는 실제 스크린 리더 사용성 평가를 모두 대체하지 않음.
+- 음원 디코딩과 브라우저 재생 시작은 검증했으나 실제 스피커/헤드폰 청취 품질 평가는 하지 않음.
+- Cloudflare 로그인이 없어 공개 배포 및 실제 R2 업로드·응답은 미검증. dry run은 실배포 증거가 아님.
+- GitHub Actions 원격 실행 결과는 PR의 Checks를 확인해야 함. 위 결과는 로컬에서 실행한 검증임.
